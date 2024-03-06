@@ -14,19 +14,15 @@
 <ol>
 
 <li>Clone the repository to your local machine:
-<br>
-    <code>
-    git clone https://github.com/Danish-Jamil-01/Image-Resizer.git
-    </code>
+ <br>
+    <code>git clone https://github.com/Danish-Jamil-01/Image-Resizer.git</code>
 </li>
-
 <br>
+
 
 <li>Navigate to the directory containing the script:
-<br>
-    <code>
-    cd Image-Resizer
-    </code>
+ <br> 
+ <code>cd Image-Resizer</code>
 </li>
 <br>
 
@@ -36,9 +32,7 @@
 
 <li>Run the script:
 <br>
-    <code>
-    python image_resizer.py
-    </code>
+    <code>python image_resizer.py</code>
 </li>
 
 <br>
@@ -59,8 +53,3 @@
 ## Contributors
 
 - Danish Jamil
-
-<br>
-
-## License
-This project is licensed under the MIT License.
