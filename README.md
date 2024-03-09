@@ -50,9 +50,9 @@
 
 <br>
 
-## Contributors
+## Contributor
 
-- [Danish Jamil](https://github.com/Danish-Jamil-01)
+[Danish Jamil](https://github.com/Danish-Jamil-01)
 
 <br>
 
