@@ -50,12 +50,6 @@
 
 <br>
 
-## Contributor
-
-[Danish Jamil](https://github.com/Danish-Jamil-01)
-
-<br>
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
