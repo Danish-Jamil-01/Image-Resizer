@@ -15,14 +15,20 @@
 
 <li>Clone the repository to your local machine:
  <br>
-    <code>git clone https://github.com/Danish-Jamil-01/Image-Resizer.git</code>
+ 
+ ```bash
+git clone https://github.com/Danish-Jamil-01/Image-Resizer.git
+```
 </li>
 <br>
 
 
 <li>Navigate to the directory containing the script:
  <br> 
- <code>cd Image-Resizer</code>
+ 
+ ```bash
+cd Image-Resizer
+```
 </li>
 <br>
 
@@ -32,7 +38,10 @@
 
 <li>Run the script:
 <br>
-    <code>python image_resizer.py</code>
+
+ ```bash
+python image_resizer.py
+```
 </li>
 
 <br>
