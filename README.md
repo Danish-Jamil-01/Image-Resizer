@@ -52,7 +52,7 @@
 
 ## Contributors
 
-- Danish Jamil
+- [Danish Jamil](https://github.com/Danish-Jamil-01)
 
 <br>
 
