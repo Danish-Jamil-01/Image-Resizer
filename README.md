@@ -1,4 +1,4 @@
-# ✨ Glassmorphism Image Resizer ✨
+# ✨ Image Resizer ✨
 
 A modern, browser-based image resizer with a dynamic 3D background and a glassmorphism interface. This tool allows you to quickly and easily resize images to your desired dimensions while maintaining aspect ratio.
 
@@ -6,8 +6,8 @@ A modern, browser-based image resizer with a dynamic 3D background and a glassmo
 
 ---
 
-![Project Screenshot](https://i.imgur.com/2oZ27qR.png)  
-*(**Note:** You can replace this placeholder URL with a screenshot of your favorite theme from our session!)*
+![Project Screenshot](<img width="1496" height="841" alt="Image" src="https://github.com/user-attachments/assets/6e51596e-9ccb-45fc-b868-051a5167937d" />)  
+
 
 ## 📝 Description
 
