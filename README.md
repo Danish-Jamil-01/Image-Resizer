@@ -6,7 +6,7 @@ A modern, browser-based image resizer with a dynamic 3D background and a glassmo
 
 ---
 
-![Project Screenshot](<img width="1496" height="841" alt="Image" src="https://github.com/user-attachments/assets/6e51596e-9ccb-45fc-b868-051a5167937d" />)  
+![Project Screenshot](https://github.com/user-attachments/assets/6e51596e-9ccb-45fc-b868-051a5167937d)
 
 
 ## 📝 Description
