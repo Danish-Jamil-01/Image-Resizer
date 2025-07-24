@@ -1,64 +1,54 @@
-# Image Resizing with OpenCV 
-<br>This Python script utilizes the OpenCV library to resize images in a specified folder and saves the resized images in a new directory. It's particularly useful for batch resizing images.
+# ✨ Glassmorphism Image Resizer ✨
 
-<br>
+A modern, browser-based image resizer with a dynamic 3D background and a glassmorphism interface. This tool allows you to quickly and easily resize images to your desired dimensions while maintaining aspect ratio.
 
-## Prerequisites
- - Python 3.x
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://danish-jamil-01.github.io/Image-Resizer/)
 
- - OpenCV (pip install opencv-python) 
+---
 
-<br>
+![Project Screenshot](https://i.imgur.com/2oZ27qR.png)  
+*(**Note:** You can replace this placeholder URL with a screenshot of your favorite theme from our session!)*
 
-## Usage
-<ol>
+## 📝 Description
 
-<li>Clone the repository to your local machine:
- <br>
- 
- ```bash
-git clone https://github.com/Danish-Jamil-01/Image-Resizer.git
-```
-</li>
-<br>
+This project is a complete evolution of a basic image resizer. It was built to explore modern web design trends like **glassmorphism** and to integrate real-time 3D graphics using **`three.js`**. The application is purely client-side, meaning all image processing happens directly in your browser, ensuring privacy and speed.
 
+## 🚀 Features
 
-<li>Navigate to the directory containing the script:
- <br> 
- 
- ```bash
-cd Image-Resizer
-```
-</li>
-<br>
+* **Easy Image Upload:** Click to upload or drag & drop your image.
+* **Custom Resizing:** Set custom width and height in pixels.
+* **Aspect Ratio Lock:** Maintain the original image proportions with a single click.
+* **Live Previews:** See a preview of the uploaded image and the final resized image.
+* **Instant Download:** Download your resized image directly to your device.
+* **Dynamic 3D Background:** An animated, real-time background built with `three.js` featuring abstract shapes.
+* **Glassmorphism UI:** A sleek, modern "frosted glass" interface.
+* **Responsive Design:** Looks great on both desktop and mobile devices.
 
-<li>Ensure your images are placed in the Images folder.</li>
+## 🛠️ Technologies Used
 
-<br>
+* **HTML5:** For the core structure of the application.
+* **CSS3:** For all styling, including Flexbox, Grid, custom properties, and the glassmorphism effect.
+* **JavaScript (ES6+):** For all application logic, including DOM manipulation, file handling, and image processing with the Canvas API.
+* **Three.js:** For creating and animating the 3D background scene.
 
-<li>Run the script:
-<br>
+## ⚙️ How To Use
 
- ```bash
-python image_resizer.py
-```
-</li>
+1.  **Visit the live site:** [https://danish-jamil-01.github.io/Image-Resizer/](https://danish-jamil-01.github.io/Image-Resizer/)
+2.  **Upload an Image:** Drag and drop an image file onto the upload box, or click it to select a file from your device.
+3.  **Set Dimensions:** Once the preview appears, enter your desired width or height. If "Lock Aspect Ratio" is checked, the other dimension will update automatically.
+4.  **Resize:** Click the "Resize Image" button.
+5.  **Download:** A preview of the resized image will appear along with a "Download Image" button. Click it to save your new image.
 
-<br>
+## 💻 Local Development
 
-<li>Resized images will be saved in the Resized Images folder.</li>
-</ol>
+To run this project on your local machine:
 
-<br>
-
-## Customization
-
-- You can modify the dimensions of the resized images by changing the parameters in the <b>'cv2.resize()'</b> function.
-
-- Adjust the input folder name (<b>'Images'</b>) and output folder name (<b>'Resized Images'</b>) as per your requirements.
-
-<br>
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/Danish-Jamil-01/Image-Resizer.git](https://github.com/Danish-Jamil-01/Image-Resizer.git)
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd Image-Resizer
+    ```
+3.  Open the `index.html` file in your web browser.
