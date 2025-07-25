@@ -17,45 +17,49 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    const material = new THREE.MeshNormalMaterial({ wireframe: false });
+    const material = new THREE.MeshNormalMaterial({ wireframe: true });
     const shapes = [];
 
-    // Aesthetic and image-like 3D geometries
+    // Create a new, modern "Lathe" geometry (vase-like shape)
+    const points = [];
+    for (let i = 0; i < 10; i++) {
+        points.push(new THREE.Vector2(Math.sin(i * 0.2) * 1.5 + 0.5, (i - 5) * 0.4));
+    }
+    const latheGeometry = new THREE.LatheGeometry(points);
+
+    // Define the list of modern geometries to use
     const modernGeometries = [
-        new THREE.TorusKnotGeometry(1.2, 0.3, 128, 16),
-        new THREE.TorusGeometry(1, 0.4, 16, 100),
-        new THREE.BoxGeometry(1.2, 1.2, 1.2),
-        new THREE.SphereGeometry(1.1, 32, 32),
-        new THREE.DodecahedronGeometry(1.1),
-        new THREE.OctahedronGeometry(1.1),
-        new THREE.IcosahedronGeometry(1.1)
+        new THREE.TorusKnotGeometry(1.2, 0.3, 128, 16), // High-res entangled rope
+        latheGeometry // The new abstract shape
     ];
 
-    // Create and distribute aesthetic 3D shapes
-    for (let i = 0; i < 60; i++) {
+    // Create and distribute a large number of random 3D objects
+    for (let i = 0; i < 50; i++) { // Increased object count
+        // Randomly select a geometry for each object
         const geometry = modernGeometries[Math.floor(Math.random() * modernGeometries.length)];
         const shape = new THREE.Mesh(geometry, material);
 
+        // Scatter objects across a much wider area to fill the screen
         shape.position.set(
             (Math.random() - 0.5) * 60,
             (Math.random() - 0.5) * 60,
             (Math.random() - 0.5) * 60
         );
-
+        
         shape.rotation.set(
             Math.random() * Math.PI,
             Math.random() * Math.PI,
             Math.random() * Math.PI
         );
-
-        const scale = Math.random() * 0.5 + 0.2;
+        
+        const scale = Math.random() * 0.4 + 0.2;
         shape.scale.set(scale, scale, scale);
 
         shapes.push(shape);
         scene.add(shape);
     }
 
-    camera.position.z = 10;
+    camera.position.z = 10; // Moved camera back to see the wider scene
 
     const animate = () => {
         requestAnimationFrame(animate);
@@ -76,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- Image Upload, Resize, and Download Logic ---
+    // --- Image Resizer Logic ---
 
     const imageInput = document.getElementById('image-input');
     const uploadBox = document.getElementById('upload-box');
     const uploadLabel = document.querySelector('.upload-label');
     const previewImage = document.getElementById('preview-image');
     const originalDimensionsEl = document.getElementById('original-dimensions');
-
+    
     const optionsBox = document.getElementById('options-box');
     const widthInput = document.getElementById('width-input');
     const heightInput = document.getElementById('height-input');
@@ -97,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let originalImage = null;
     let originalAspectRatio = 1;
 
-    uploadBox.addEventListener('click', () => imageInput.click());
+    // uploadBox.addEventListener('click', () => imageInput.click()); // <-- THIS LINE IS REMOVED
 
     imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
@@ -108,11 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         uploadBox.classList.add('dragover');
     });
-
     uploadBox.addEventListener('dragleave', () => {
         uploadBox.classList.remove('dragover');
     });
-
     uploadBox.addEventListener('drop', (e) => {
         e.preventDefault();
         uploadBox.classList.remove('dragover');
@@ -146,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
             heightInput.value = Math.round(widthInput.value / originalAspectRatio);
         }
     });
-
     heightInput.addEventListener('input', () => {
         if (aspectRatioLock.checked) {
             widthInput.value = Math.round(heightInput.value * originalAspectRatio);
@@ -155,21 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resizeBtn.addEventListener('click', () => {
         if (!originalImage) return;
-
         const newWidth = parseInt(widthInput.value);
         const newHeight = parseInt(heightInput.value);
-
         if (isNaN(newWidth) || isNaN(newHeight) || newWidth <= 0 || newHeight <= 0) {
             alert('Please enter valid width and height.');
             return;
         }
-
         outputCanvas.width = newWidth;
         outputCanvas.height = newHeight;
         const ctx = outputCanvas.getContext('2d');
         ctx.drawImage(originalImage, 0, 0, newWidth, newHeight);
         downloadBox.classList.remove('hidden');
-
         outputCanvas.toBlob((blob) => {
             const url = URL.createObjectURL(blob);
             downloadBtn.href = url;
